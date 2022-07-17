@@ -44,10 +44,27 @@ Chapter 1: Forwards, Futures, and Swaps
   
 \end{itemize}
 
-Editing short documents online is free. View premium plans and pricing at
-\url{https://latexbase.com/static/pricing} to enjoy unlimited document editing
-(online or offline) and a variety of other useful features. Thanks for trying
-out our service and don't hesitate to get in touch at
-\href{mailto:shdu@yahoo.com}!
+\paragraph{Swaps}
+\begin{itemize}
+	\item Swap price is the linear combination of zero rates\\
+	${C_i = \Delta T[L(T_{i-1}, T_i)-R]}$\\
+	${L(T_{i-1}, T_i):= \frac{1-P(T_{i-1}, T_i)}{\Delta T P(T_{i-1}, T_i)}}$\\
+	${C_i=\frac{1-P(T_{i-1}, T_i)}{P(T_{i-1}, T_i)}-(R\Delta T)}$\\
+	in terms of present value then,\\
+	${C_i(t)={\frac{1-P(T_{i-1}, T_i)}{P(T_{i-1}, T_i)} P(t, T_{i})}-(R\Delta T)P(t,T_i)}\\=[P(t, T_{i-1})- P(t, T_i)]-(R\Delta T) P(t, T_i)$\\
+	=present value of float - present value of fixed
+	\\
+	\item An important thing to see there is that the present value of swap cash flows is a linear combination of discount factors, which are in turn completely determined by the current yield curve.\\
+	
+	Now, the value of the swap is:\\
+	${S(t)=\sum_{i=1}^n C_i(t)=\sum_{i=1}^n [P(t, T_{i-1}-(1+R\Delta T ) P(t, T_i)]}$\\
+	
+		 ${S(t)=P(t, T_0)-R \Delta T \sum_{i=1}^{n} P(t, T_i) -P(t, T_n) }$ 
+	\item setting swap price S(t) to 0 and derive the fixed swap rate R, we have the fixed swap rate,\\
+	${R=\frac{P(0, T_0)-P(0, T_n)}{\Delta T \sum_{i=1}^n P(0, T_i)} }$ 
+  
+\end{itemize}
+
+
 
 \end{document}
